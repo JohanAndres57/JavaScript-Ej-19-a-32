@@ -1,0 +1,9 @@
+<script>
+    const calcularPromedio = numeros => {
+  if (numeros.length === 0) return 0;
+  const suma = numeros.reduce((acumulador, actual) => acumulador + actual, 0);
+  return suma / numeros.length;
+};
+
+console.log(calcularPromedio([5, 10, 15]));
+</script>
