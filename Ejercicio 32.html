@@ -1,17 +1,18 @@
 <script>
   const carrito = {
-  cliente: 'Laura',
-  productos: [
-    { nombre: 'Teclado', precio: 50 },
-    { nombre: 'Mouse', precio: 25 },
-    { nombre: 'Monitor', precio: 200 }
-  ]
-};
+    cliente: 'Laura',
+    productos: [
+      { nombre: 'Teclado', precio: 50 },
+      { nombre: 'Mouse', precio: 25 },
+      { nombre: 'Monitor', precio: 200 }
+    ]
+  };
 
-let total = 0;
-for (let producto of carrito.productos) {
-  total += producto.precio;
-}
+  let total = 0;
+  for (let producto of carrito.productos) {
+    total += producto.precio;
+  }
 
-console.log(Total a pagar: $${total}); 
+ 
+  console.log(`Total a pagar: $${total}`); 
 </script>

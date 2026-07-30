@@ -1,15 +1,15 @@
 <script>
   const estudiante = {
-  nombre: 'Ana',
-  materia: 'Programación',
-  nota: 95
-};
+    nombre: 'Ana',
+    materia: 'Programación',
+    nota: 95
+  };
 
-console.log('Llaves:', Object.keys(estudiante));   
-console.log('Valores:', Object.values(estudiante)); 
+  console.log('Llaves:', Object.keys(estudiante));   
+  console.log('Valores:', Object.values(estudiante)); 
 
-Object.keys(estudiante).forEach(clave => {
-  console.log(${clave}: ${estudiante[clave]});
-});
-
+ 
+  Object.keys(estudiante).forEach(clave => {
+    console.log(`${clave}: ${estudiante[clave]}`);
+  });
 </script>
