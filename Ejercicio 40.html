@@ -1,3 +1,39 @@
 <script>
-    
+   function validarFormulario(nombre, correo) {
+  
+  if (!nombre || typeof nombre !== "string" || nombre.trim().length < 2) {
+    throw new Error("El nombre es obligatorio y debe tener al menos 2 caracteres.");
+  }
+
+  
+  const formatoCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if (!correo || !formatoCorreo.test(correo)) {
+    throw new Error("El correo electrónico proporcionado no es válido.");
+  }
+
+  return "Formulario procesado correctamente.";
+}
+
+
+try {
+  const resultado = validarFormulario("Ana", "ana@example.com");
+  console.log( resultado);
+} catch (error) {
+  console.error("error", error.message);
+}
+
+
+try {
+  validarFormulario("", "correo@ejemplo.com");
+} catch (error) {
+  console.error("error", error.message); 
+}
+
+
+try {
+  validarFormulario("Carlos", "correo-invalido.com");
+} catch (error) {
+  console.error("error", error.message); 
+} 
 </script>
